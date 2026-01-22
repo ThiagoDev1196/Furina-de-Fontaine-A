@@ -1,0 +1,93 @@
+<div class="dark-overlay"></div>
+<div class="header" id="home">
+  <div class="header-text">
+    <h1 class="texto">Furina de Fontaine</h1>
+    <p class="texto">The boutique coffee that awakens your senses</p>
+    <button id="menubtn" class="hero-button">See our menu</button>
+  </div>
+</div>
+
+<style>
+  .header {
+    background: url(../assets/hero-img.jpg);
+    height: 630px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-position: center;
+  }
+
+  .dark-overlay {
+    background-color: rgb(0, 0, 0);
+    height: 630px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.6;
+  }
+
+  .header-text {
+    color: rgb(240, 230, 210);
+    z-index: 10;
+  }
+
+  .texto {
+    z-index: 10;
+  }
+
+  .hero-button {
+    background-color: rgb(240, 230, 210);
+    color: rgb(40, 28, 15);
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    border: none;
+  }
+
+  .hero-button:hover {
+    background-color: white;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+        height: 95vh;
+    }
+    .header-text {
+        padding: 20px;
+    }
+
+    .dark-overlay {
+        height: 95vh;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .header-text p {
+        font-size: 20px;
+    }
+
+    .hero-button {
+        width: 150px;
+        height: 50px;
+    }
+
+@media (max-width: 470px) {
+    .header {
+        height: 100vh;
+    }
+
+    .dark-overlay {
+        height: 100vh;
+    }
+    }
+</style>
