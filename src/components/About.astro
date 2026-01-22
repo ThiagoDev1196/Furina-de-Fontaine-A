@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import aboutImg from "../assets/about-img.jpg";
+---
+
+<div class="about-container">
+  <div class="title-container">
+    <p class="about-tittle">ABOUT US</p>
+  </div>
+  <div class="about-content">
+    <p>
+      Nestled in the heart of the charming town of Fontaine, "Furina de
+      Fontaine" is a whimsical café curated by the visionary Lady Furina.
+      Adorned with ivy and fairy lights, the cozy haven invites patrons into a
+      world where sophistication meets warmth. Lady Furina's meticulous
+      attention to detail is evident in the café's ambiance, featuring plush
+      velvet chairs, vintage-inspired décor, and a palette of pastel hues.
+      <br />
+      <br />
+      "Furina de Fontaine" opens its doors at <b><u>8:00 AM</u></b>, inviting
+      you to start your day with a cup of exquisite coffee and the enchanting
+      atmosphere created by Lady Furina and bids farewell to its patrons at <b
+        ><u>10:00</u></b
+      > PM, allowing you to enjoy the warmth and culinary delights until late into
+      the evening.
+    </p>
+    <Image src={aboutImg} class="about-image" alt="A lovely coffee next to a delicious croissant" />
+  </div>
+</div>
+
+<style>
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(150, 120, 90, 0.1);
+    padding: 20px;
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .about-content p {
+    line-height: 1.9;
+    padding: 80px 20px;
+    font-size: 16px;
+  }
+
+  .about-image {
+    width: 300px;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 50px;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-content p {
+      padding: 10px;
+    }
+
+    .about-image {
+      width: 300px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-content p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .about-content {
+      font-size: 15px;
+    }
+  }
+</style>

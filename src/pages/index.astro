@@ -2,9 +2,18 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Navigation from "../components/Navigation.astro";
 import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
 ---
 
 <MainLayout>
-	<Navigation />
-	<Hero />
+  <header>
+    <Navigation />
+    <Hero />
+  </header>
+
+  <main class="main">
+    <section id="about">
+      <About />
+    </section>
+  </main>
 </MainLayout>
