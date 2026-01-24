@@ -24,6 +24,7 @@ import locationPicture from "../assets/where-img.jpg";
 <style>
   .where-title {
     margin-bottom: 10px;
+    margin-top: 20px;
   }
 
   .where-container {
@@ -32,9 +33,10 @@ import locationPicture from "../assets/where-img.jpg";
     justify-content: center;
     align-items: center;
     background-color: rgb(55, 40, 25);
-    max-width: 1400px;
-    width: 90%;
+    max-width: 1600px;
+    width: 100%;
     margin: auto;
+    flex-shrink: 0;
   }
 
   .where-text {
@@ -62,8 +64,6 @@ import locationPicture from "../assets/where-img.jpg";
       padding: 10px;
     }
 
-
-
     .where-text {
       font-size: 15px;
       padding: 10px;
@@ -78,6 +78,10 @@ import locationPicture from "../assets/where-img.jpg";
     .where-text {
       border-right: none;
       border-bottom: 2px solid rgb(240, 230, 210);
+    }
+
+    .where-img img {
+      height: 380px;
     }
   }
 </style>
