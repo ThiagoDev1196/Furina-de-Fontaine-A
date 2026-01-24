@@ -1,0 +1,134 @@
+---
+import { Image } from "astro:assets";
+import FooterImg from "../assets/FurinaLogoF.png";
+---
+
+<div class="footer-container">
+  <div class="footer-img">
+    <Image src={FooterImg} alt="Furina de Fontaine logo on footer" /> Furina de Fontaine
+  </div>
+
+  <div class="footer">
+    <div class="footer-contact">
+      <ul>
+        <b>📞 Contact us</b>
+        <li>+54 1234 5678</li>
+        <li>furinadefontainecafe@gmail.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-about">
+      <ul>
+        <b>📖 About us</b>
+        <li><a href="">Services/Products</a></li>
+        <li><a href="">FAQs</a></li>
+        <li><a href="">Terms of Service</a></li>
+        <li><a href="">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-sm">
+      <ul>
+        <b>🌐 Our Social Media</b>
+        <li><a href="">Instagram</a></li>
+        <li><a href="">X</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-cafe">
+      <ul>
+        <b>☕ About the cafe</b>
+        <li><a href="">Reservations</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Reviews</a></li>
+        <li>Hours of Operation: 08:00 AM ~ 10:00 PM</li>
+        <li><a href="">Full Menu</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    &copy; 2024 Furina de Fontaine. All rights reserved. Images from Unsplash.
+  </div>
+</div>
+
+<style>
+  .footer-img img {
+    width: 80px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .footer-img,
+  .footer-copyright {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    background: rgb(20, 13, 6);
+    border-bottom: 2px solid white;
+    color: rgb(240, 230, 210);
+    justify-content: center;
+  }
+
+  .footer {
+    display: flex;
+    background-color: rgb(20, 13, 6);
+    color: rgb(240, 230, 210);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .footer-contact li,
+  .footer-about li,
+  .footer-sm li,
+  .footer-cafe li {
+    list-style: none;
+  }
+
+  .footer-about a,
+  .footer-sm a,
+  .footer-cafe a {
+    color: rgb(240, 230, 210);
+    text-decoration: none;
+  }
+
+  .footer-about ul b,
+  .footer-sm ul b,
+  .footer-cafe ul b,
+  .footer-contact ul b {
+    color: white;
+  }
+
+  .footer-about a:hover,
+  .footer-sm a:hover,
+  .footer-cafe a:hover {
+    color: rgb(215, 200, 160);
+  }
+
+  .footer-copyright {
+    border-bottom: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  @media (max-width: 1034px) {
+    .footer-contact li,
+    .footer-about li,
+    .footer-sm li,
+    .footer-cafe li {
+      font-size: 15px;
+    }
+
+    .footer {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-img,
+    .footer-copyright {
+      font-size: 15px;
+    }
+  }
+</style>
