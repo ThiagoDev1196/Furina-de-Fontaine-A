@@ -1,0 +1,127 @@
+---
+import { Image } from 'astro:assets';
+import InviteImg from '../assets/InviteImg.png';
+---
+
+
+<div id="inv" class="title-container">
+  <div class="offer-title">COME TO VISIT US</div>
+</div>
+
+<div class="inv-container">
+  <div class="inv-img">
+    <Image src={InviteImg} alt="A tasty coffee with a delicous cake on a table" />
+  </div>
+  <div class="inv-text-container">
+    <div class="inv-text">
+      <p>Lights on, coffee ready. <br /> We're waiting for you</p>
+      <button>Book now</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .offer-title {
+    margin-bottom: 30px;
+  }
+
+  .inv-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1400px;
+    flex-shrink: 0;
+    margin: auto;
+    box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 80px;
+  }
+
+  .inv-img {
+    flex: 1.4;
+    height: 500px;
+  }
+
+  .inv-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    object-position: center;
+  }
+
+  .inv-text-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex: 1;
+  }
+
+  .inv-text {
+    padding: 20px;
+    font-size: 25px;
+    line-height: 1.7;
+  }
+
+  .inv-text button {
+    background-color: rgb(40, 28, 15);
+    color: white;
+    font-size: 23px;
+    border: none;
+    border-radius: 14px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .inv-text button:hover {
+    background-color: rgb(98, 76, 54);
+    transition: ease 0.4s;
+  }
+
+  @media (max-width: 1024px) {
+    .offer-gallery img {
+      width: 140px;
+      height: 150px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .inv-container {
+      flex-direction: column;
+    }
+
+    .inv-img img {
+      height: 300px;
+      width: 100%;
+    }
+
+    .inv-img {
+      width: 100%;
+    }
+
+    .inv-text {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .inv-text button {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .inv-text button {
+      width: 200px;
+      font-size: 16px;
+    }
+
+    .inv-text {
+      font-size: 18px;
+    }
+  }
+</style>
