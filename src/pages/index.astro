@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Menu from "../components/Menu.astro";
+import Location from "../components/Location.astro";
 ---
 
 <MainLayout>
@@ -13,11 +14,17 @@ import Menu from "../components/Menu.astro";
   </header>
 
   <main class="main">
+
     <section id="about">
       <About />
     </section>
+
     <section id="menu">
       <Menu />
+    </section>
+
+    <section id="location"> 
+      <Location />
     </section>
   </main>
 </MainLayout>

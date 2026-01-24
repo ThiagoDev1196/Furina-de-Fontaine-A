@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import locationPicture from "../assets/where-img.jpg";
+---
+
+
+<div class="title-container">
+  <div class="where-title">WHERE TO FIND US</div>
+</div>
+
+<div class="where-container">
+  <div class="where-text">
+    <p>
+      📍 Fontaine, city center <br />
+      🚶 3 min from Main Square <br />
+      ☕ Cozy café surrounded by cobblestone streets
+    </p>
+  </div>
+  <div class="where-img">
+    <Image alt="Furina de Fontaine from inside with their dear customers" src={locationPicture} />
+  </div>
+</div>
+
+<style>
+  .where-title {
+    margin-bottom: 10px;
+  }
+
+  .where-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 40, 25);
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .where-text {
+    line-height: 1.5;
+    font-size: 18px;
+    border-right: 2px solid rgb(240, 230, 210);
+    padding: 40px;
+  }
+
+  .where-img {
+    flex: 1;
+    height: 500px;
+  }
+
+  .where-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px;
+    object-position: center;
+  }
+
+  @media (max-width: 1024px) {
+    .where-container {
+      padding: 10px;
+    }
+
+
+
+    .where-text {
+      font-size: 15px;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .where-container {
+      flex-direction: column;
+    }
+
+    .where-text {
+      border-right: none;
+      border-bottom: 2px solid rgb(240, 230, 210);
+    }
+  }
+</style>
