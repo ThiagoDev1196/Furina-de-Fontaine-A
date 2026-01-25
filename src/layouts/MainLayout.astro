@@ -1,16 +1,15 @@
 ---
 import "../styles/global.css";
-import cafeIcon from "../assets/icon.ico";
+const base = import.meta.env.BASE_URL;
 ---
 
-<!DOCTYPE html>
-<head>
-  <html lang="es">
+<!doctype html>
+<html lang="es">
+  <head>
     <title>Furina de Fontaine</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <link rel="icon" href={cafeIcon} />
+    <link rel="icon" type="image/x-icon" href={`${base}/icon.ico`} />
     <meta
       name="description"
       content="Experience the finest specialty coffee beans, ethically sourced and roasted to perfection. Visit us for a unique brew or order your favorite blend online."
@@ -29,8 +28,8 @@ import cafeIcon from "../assets/icon.ico";
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <slot />
-</body>
+  </body>
 </html>
