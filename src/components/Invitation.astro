@@ -15,7 +15,7 @@ import InviteImg from '../assets/InviteImg.png';
   <div class="inv-text-container">
     <div class="inv-text">
       <p>Lights on, coffee ready. <br /> We're waiting for you</p>
-      <button>Book now</button>
+      <a href={import.meta.env.BASE_URL + "/booking"}>Book now</a>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@ import InviteImg from '../assets/InviteImg.png';
     line-height: 1.7;
   }
 
-  .inv-text button {
+  .inv-text a {
     background-color: rgb(40, 28, 15);
     color: white;
     font-size: 23px;
@@ -73,10 +73,14 @@ import InviteImg from '../assets/InviteImg.png';
     width: 300px;
     height: 50px;
     cursor: pointer;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    text-decoration: none;
   }
 
-  .inv-text button:hover {
+  .inv-text a:hover {
     background-color: rgb(98, 76, 54);
     transition: ease 0.4s;
   }
@@ -109,13 +113,13 @@ import InviteImg from '../assets/InviteImg.png';
       text-align: center;
     }
 
-    .inv-text button {
+    .inv-text a {
       font-size: 22px;
     }
   }
 
   @media (max-width: 470px) {
-    .inv-text button {
+    .inv-text a {
       width: 200px;
       font-size: 16px;
     }
