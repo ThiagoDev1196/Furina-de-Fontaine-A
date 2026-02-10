@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import miLogo from '../assets/FurinaLogo2.png';
+const base = import.meta.env.BASE_URL;
 ---
 
 <nav class="topnav">
@@ -14,10 +15,10 @@ import miLogo from '../assets/FurinaLogo2.png';
   <label class="menu-icon" id="menu-open">☰</label>
 
   <ul class="menu" id="nav">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About us</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#location">Where</a></li>
+    <li><a href={`${base}`}>Home</a></li>
+    <li><a href={`${base}#about`}>About us</a></li>
+    <li><a href={`${base}#menu`}>Menu</a></li>
+    <li><a href={`${base}#location`}>Where</a></li>
     <li><a class="book" href="#inv">Book now</a></li>
   </ul>
 </nav>

@@ -1,5 +1,6 @@
 ---
 import { menuItems } from "../data/menuData.js";
+const base = import.meta.env.BASE_URL;
 ---
 
 <div class="title-container">
@@ -26,7 +27,7 @@ import { menuItems } from "../data/menuData.js";
 </div>
 
 <div class="menu-book-container">
-  <a href="" class="menu-book">Wanna taste any of them? <br /> Book now!</a>
+  <a  href={import.meta.env.BASE_URL + "/booking"} class="menu-book">Wanna taste any of them? <br /> Book now!</a>
 </div>
 
 <style>
@@ -39,7 +40,6 @@ import { menuItems } from "../data/menuData.js";
     max-width: 1800px;
     grid-template-columns: 1fr 1fr;
   }
-
 
   .menu-content-items {
     padding: 0 15px;

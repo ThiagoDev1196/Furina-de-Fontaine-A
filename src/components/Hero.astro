@@ -1,9 +1,18 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <div class="dark-overlay"></div>
 <div class="header" id="home">
   <div class="header-text">
     <h1 class="texto">Furina de Fontaine</h1>
     <p class="texto">The boutique coffee that awakens your senses</p>
-    <button id="menubtn" class="hero-button">See our menu</button>
+    <div class="hero-buttons-container">
+      <button id="menubtn" class="hero-button">See our menu</button>
+      <a class="booking-button" href={import.meta.env.BASE_URL + "/booking"}
+        >Book now</a
+      >
+    </div>
   </div>
 </div>
 
@@ -41,6 +50,13 @@
     z-index: 10;
   }
 
+  .hero-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
   .hero-button {
     background-color: rgb(240, 230, 210);
     color: rgb(40, 28, 15);
@@ -50,46 +66,68 @@
     border: none;
   }
 
-  .hero-button:hover {
+  .hero-button:hover, .booking-button:hover {
     background-color: white;
     transition: 0.2s;
     cursor: pointer;
   }
 
+  .booking-button {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(240, 230, 210);
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (max-width: 768px) {
     .header {
-        height: 95vh;
+      height: 95vh;
     }
     .header-text {
-        padding: 20px;
+      padding: 20px;
     }
 
     .dark-overlay {
-        height: 95vh;
+      height: 95vh;
     }
 
     .header-text h1 {
-        font-size: 40px;
+      font-size: 40px;
     }
 
     .header-text p {
-        font-size: 20px;
+      font-size: 20px;
     }
 
-    .hero-button {
-        width: 150px;
-        height: 50px;
+    .hero-button,
+    .booking-button {
+      width: 150px;
+      height: 50px;
     }
   }
-  
-@media (max-width: 470px) {
+
+  @media (max-width: 470px) {
     .header {
-        height: 100vh;
+      height: 100vh;
     }
 
     .dark-overlay {
-        height: 100vh;
+      height: 100vh;
+    }
+
+    .hero-buttons-container {
+      flex-direction: column;
+    }
+    .hero-button,
+    .booking-button {
+      width: 130px;
+      height: 50px;
+      font-size: 18px;
     }
   }
-
 </style>
