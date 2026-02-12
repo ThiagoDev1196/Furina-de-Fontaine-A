@@ -2,6 +2,9 @@
 import { Image } from 'astro:assets';
 import miLogo from '../assets/FurinaLogo2.png';
 const base = import.meta.env.BASE_URL;
+
+const { pathname } = Astro.url;
+const isHome = pathname === base || pathname === `${base}/`
 ---
 
 <nav class="topnav">
@@ -15,11 +18,11 @@ const base = import.meta.env.BASE_URL;
   <label class="menu-icon" id="menu-open">☰</label>
 
   <ul class="menu" id="nav">
-    <li><a href={`${base}`}>Home</a></li>
-    <li><a href={`${base}#about`}>About us</a></li>
-    <li><a href={`${base}#menu`}>Menu</a></li>
-    <li><a href={`${base}#location`}>Location</a></li>
-    <li><a class="book" href="#inv">Visit us</a></li>
+    <li><a href={isHome ? '#' : `${base}`}>Home</a></li>
+    <li><a href={isHome ? '#about' : `${base}#about`}>About us</a></li>
+    <li><a href={isHome ? '#menu' : `${base}#menu`}>Menu</a></li>
+    <li><a href={isHome ? '#location' : `${base}#location`}>Location</a></li>
+    <li><a class="book" href={isHome ? '#invitation' : `${base}#invitation`}>Visit us</a></li>
   </ul>
 </nav>
 
